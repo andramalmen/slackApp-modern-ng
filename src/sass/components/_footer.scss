@@ -1,0 +1,59 @@
+#footer:not(.footer-msg-input) {
+  height: 4rem;
+  background: #fff;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 220px;
+  right: 1rem;
+  z-index: 52;
+}
+
+#messages-input-container {
+  font-size: .9rem;
+  position: absolute;
+  bottom: 1.375rem;
+  left: 1.375rem;
+  right: .25rem;
+  padding-right: 1rem;
+  box-shadow: none;
+
+  #message-input {
+    height: 42px;
+    width: 100%;
+    background: #fff;
+    font-size: .9375rem;
+    line-height: 1.2rem;
+    border: 2px solid #E0E0E0;
+    background-clip: padding-box;
+    margin: 0;
+    color: #3d3c40;
+    -webkit-appearance: none;
+    box-shadow: none;
+    outline: 0;
+    position: absolute;
+    bottom: 0;
+    min-height: 2.625rem!important;
+    padding-top: .5625rem;
+    padding-bottom: .5625rem;
+    padding-left: .5rem;
+    padding-right: 2.5rem;
+    max-height: 10rem!important;
+    resize: none!important;
+    transition: none;
+    border-radius: 6px 6px 6px 6px;
+    overflow-y: hidden;
+  }
+
+  #message-input-message {
+    text-align: center;
+    color: #a4a4a4;
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  
+}

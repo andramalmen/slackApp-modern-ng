@@ -1,0 +1,193 @@
+#col-messages {
+  margin-left: 0;
+  position: relative;
+}
+
+#col-channels-bg {
+  height: auto;
+  width: 220px;
+  background: #4D394B;
+  top: 0;
+  left: 0;
+  bottom: -3rem;
+}
+
+#col-channels {
+  background: #4d394b;
+  color: #ab9ba9;
+  width: 220px;
+  float: left;
+  position: relative;
+  top: .4375rem;
+
+  &:before {
+    width: 260px;
+    height: 170px;
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    opacity: 0;
+    transition: opacity .2s ease 0s;
+  }
+
+  #channels-scroller {
+    opacity: 1;
+    transition: opacity .2s ease 0s;
+    border-right: .25rem solid transparent;
+    height: 1800px;
+    padding: 0 0 5rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+
+  }
+
+  .channels-list-new-btn {
+    left: calc(112px + 4rem);
+    right: auto;
+
+    position: absolute;
+    z-index: 1;
+    right: 16px;
+    top: -1px;
+    padding: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #ab9ba9;
+    opacity: .3;
+    transition: opacity 50ms;
+    outline: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  h2 {
+    text-align: left;
+    font-size: .8rem;
+    line-height: 1.25rem;
+    margin: 0 1rem .1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ab9ba9;
+    width: 165px;
+    position: relative;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .channel-list-header-label {
+      display: block;
+      text-transform: inherit;
+      color: inherit;
+      outline: 0;
+      text-align: left;
+    }
+
+    .header-count {
+      opacity: .5;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+    color: #ab9ba9;
+    margin: 0 1px 0 0;
+    width: 12.75rem;
+    max-width: calc(260px - 16px);
+    padding: 0;
+
+    &>li {
+      overflow: hidden;
+    }
+
+    li {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      height: 1.5rem;
+      margin-right: 1px;
+      position: relative;
+      clear: both;
+
+      a {
+        color: #ab9ba9;
+        display: block;
+        height: 1.5rem;
+        padding: 0 .25rem 0 1rem;
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        background-clip: padding-box;
+        text-decoration: none!important;
+
+        .prefix {
+          font-weight: 300;
+          opacity: .5;
+          display: block;
+          float: left;
+        }
+
+        .unread-highlights {
+          text-shadow: 0 1px 0 rgba(0,0,0,.2);
+          color: #fff;
+          background: #eb4d5c;
+          position: absolute;
+          top: 3px;
+          right: 4px;
+          border-radius: 9px;
+          padding: 2px 0;
+          font-size: .8rem;
+          line-height: .875rem;
+          font-weight: 700;
+          vertical-align: baseline;
+          white-space: nowrap;
+          width: 1.5625rem;
+          text-align: center;
+        }
+        
+      }
+
+      &.channel {
+        .prefix {
+           margin: 5px 2px 0;
+        }
+      }
+    }
+  }
+  
+}
+
+#channels {
+  margin-top: .5rem;
+}
+
+.section-holder {
+  margin: 1rem 0 2rem;
+  width: inherit;
+  position: relative;
+
+  ul {
+    li { 
+      a:hover {
+        background: #3e313c;
+      }
+
+      &.active {
+        a {
+          background: #4c9689;
+          color: white !important; // ergh
+        }
+      }
+    }
+  }
+
+}
